@@ -4,26 +4,21 @@ import {
   Route,
   Routes,
 } from "react-router-dom";
+import BusinessCard from "./components/BusinessCard";
 
 function App() {
   return (
     <>
       <Router>
         <Routes>
-          <Route index element={<Login />} />
-          <Route path='register' element={<Register />} />
-          <Route path='forget' element={<Forget />} />
-          <Route
-            path='/password-reset-confirm/:uid/:token'
-            element={<Reset />}
-          />
+          <Route path='/' element={<BusinessCard />}>
+            {/* <Route
+            path='BusinessCard'
+            element={<BusinessCard />}
+          /> */}
+          </Route>
         </Routes>
       </Router>
-      <div className='flex h-full flex-col w-1/4 border-red bg-green'>
-        <div className='h-1/2'>
-          <img src={photo} alt='' />
-        </div>
-      </div>
     </>
   );
 }
